@@ -1,0 +1,486 @@
+html, body {
+    background: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'PF Centro Sans Pro';
+    src: url('PFCentroSansPro-ThinItalic.eot');
+    src: local('PFCentroSansPro-ThinItalic'),
+    url('PFCentroSansPro-ThinItalic.eot?#iefix') format('embedded-opentype'),
+    url('PFCentroSansPro-ThinItalic.woff2') format('woff2'),
+    url('PFCentroSansPro-ThinItalic.woff') format('woff'),
+    url('PFCentroSansPro-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+@media only screen and (max-width: 1600px) {
+    .Accessories_container img {
+        height: 90%;
+        padding-top: 30px;
+    }
+    .AppleWatch_container img {
+        height: 90%;
+        padding-top: 30px;
+    }
+}
+@media only screen and (max-width: 1440px) {
+    .AirPods_container img {
+        height: 90%;
+        padding-top: 30px;
+    }
+    .AppleWatch_container img {
+        height: 80%;
+        padding-top: 60px;
+
+    }
+    .AppleTV_container img {
+        height: 80%;
+        padding-top: 60px;
+    }
+    .Accessories_container img {
+        height: 80%;
+        padding-top: 60px;
+    }
+}
+@media only screen and (max-width: 1280px) {
+    .AirPods_container img {
+        height: 80%;
+        padding-top: 60px;
+    }
+    .AppleWatch_container img {
+        height: 75%;
+        padding-top: 75px;
+
+    }
+    .AppleTV_container img {
+        height: 75%;
+        padding-top: 75px;
+    }
+    .Accessories_container img {
+        height: 75%;
+        padding-top: 75px;
+    }
+    .popular_products_4 h3{
+        font-size: medium;
+    }
+    .img_container2 img {
+        margin: 16.2% 0 11% 0;
+        max-width: 80%;
+    }
+    .img_container img {
+        margin: 6.8% 0 11% 0;
+        max-width: 80%
+    }
+    .img_container1 img {
+        margin: 24.8% 0 30.03% 0;
+        max-width: 80%;
+    }
+    .bottom_buy_menu {
+        margin-top: 3%;
+    }
+    .img_container3 img {
+        margin: 13% 12.5% 18% 0;
+    }
+    .img_container5 img {
+        max-width: 95%;
+        margin: 25.3% 13.9% 29.5% 0;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    #Head {
+        display: none;
+    }
+    .white_field {
+        display: none;
+    }
+    .mobile_menu {
+        text-align: left;
+        display: block;
+    }
+    #menu__toggle {
+        opacity: 0;
+    }
+    .menu__btn {
+        display: flex; /* используем flex для центрирования содержимого */
+        align-items: center;  /* центрируем содержимое кнопки */
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 111;
+    }
+    /* добавляем "гамбургер" */
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #f1f1f1;
+        transition-duration: .25s
+    }
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+    }
+    /* контейнер меню */
+    .menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: -100%;
+        width: 300px;
+        height: 35%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        background-color: #1F1F1F;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        transition-duration: .25s;
+        z-index: 110;
+    }
+    /* элементы меню */
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+        color: #f1f1f1;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+        transition-duration: .25s
+    }
+    .menu__item:hover {
+        background-color: #CFD8DC;
+    }
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        left: 0;
+    }
+    .LogoCenterMobile {
+        position: sticky;
+        top: 0;
+        background-color: #1F1F1F;
+        z-index: 110;
+        width: 100%;
+        height: 64px;
+        display: block;
+    }
+    .LogoCenterMobile img {
+        margin-top: 7px;
+    }
+    .popular_products_1 {
+        margin-top: 60px;
+    }
+    .img_container img {
+        margin: 6.8% 0 11% 0;
+    }
+    .img_container1 img {
+        margin: 24.8% 0 30.03% 0;
+        max-width: 85%;
+    }
+    .img_container2 img {
+        margin: 16.2% 0 11% 0 ;
+        max-width: 75%;
+    }
+    .popular_products_2 {
+        margin: 4% 0 4% 0;
+    }
+    .Text_container {
+        align-items: center;
+    }
+    .AirPods_container img {
+        width: 85%;
+    }
+    .AppleWatch_container img {
+        height: 60%;
+        padding-top: 120px;
+    }
+    .AppleTV_container img {
+        height: 60%;
+        padding-top: 120px;
+    }
+    .Accessories_container img {
+        height: 65%;
+        padding-top: 105px;
+    }
+    .img_container3 img {
+        max-width: 100%;
+        margin: 13% 0 18% 0;
+    }
+    .img_container5 img {
+        max-width: 85%;
+        margin: 25.3% 0 29.5% 0;
+    }
+    .social_network {
+        width: 14.67%;
+    }
+    .bottom_buy_menu {
+        margin-top: 3%;
+    }
+    .Text_container p {
+        font-size: 15px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .pp_first {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bottom_premenu_low_px {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .bottom_premenu_low_px a {
+        text-decoration: none;
+        align-self: center;
+    }
+    .bottom_premenu_low_px p {
+        font-size: 15px;
+    }
+    .bottom_buy_menu {
+        display: none;
+    }
+    .product_pp_first {
+        width: 100%;
+    }
+    .product_pp_second {
+        width: 100%;
+        margin-top: 5%;
+    }
+    .brothers_container {
+        justify-content: space-evenly;
+    }
+    .pp_second {
+        flex-direction: column;
+        align-items: center;
+    }
+    .price {
+        align-self: center;
+    }
+    .new_product {
+        justify-content: left;
+        margin-left: 25%
+    }
+    .bottom_premenu_low_px a{
+        margin-left: 12%;
+    }
+    .img_container3 img {
+        margin: 13% 15% 18% 0;
+    }
+    .img_container img {
+        margin: 6.8% 10% 11% 0;
+    }
+    .AirPods_container img {
+        height: 60%;
+        padding-top: 120px;
+    }
+    .AppleWatch_container img {
+        height: 50%;
+        padding-top: 150px;
+    }
+    .AppleTV_container img {
+        height: 50%;
+        padding-top: 150px;
+    }
+    .Accessories_container img {
+        height: 55%;
+        padding-top: 135px;
+    }
+    .AppleWatch_container .Text_container h1{
+        margin: 5% 5% 0 5%
+    }
+    .social_network {
+        width: 20%;
+    }
+    .dark_footer_menu p {
+        font-size: 14px;
+    }
+    .gadjets_container {
+        width: 20%;
+    }
+    .gadjets_container_all {
+        width: 20%;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .pp_first {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bottom_premenu_low_px {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 3%;
+    }
+    .bottom_premenu_low_px a {
+        text-decoration: none;
+        align-self: center;
+        margin-left: 5%;
+    }
+    .bottom_premenu_low_px p {
+        font-size: 15px;
+    }
+    .bottom_buy_menu {
+        display: none;
+    }
+    .product_pp_first {
+        width: 100%;
+    }
+    .product_pp_second {
+        width: 100%;
+        margin-top: 5%;
+    }
+    .brothers_container {
+        justify-content: space-evenly;
+    }
+    .pp_second {
+        flex-direction: column;
+        align-items: center;
+    }
+    .price {
+        align-self: center;
+    }
+    .new_product {
+        justify-content: left;
+        margin-left: 22%
+    }
+    .gadjets_container {
+        width: 25%;
+    }
+    .gadjets_container_all {
+        width: 25%;
+    }
+    .social_network {
+        width: 35%;
+    }
+    .dark_footer_menu p {
+        font-size: 12px;
+    }
+    .SEO_container {
+        margin-top: 12%;
+    }
+    .AirPods_container img {
+        height: 60%;
+        width: 95%;
+        padding-top: 120px;
+    }
+    .AppleWatch_container img {
+        height: 40%;
+        width: 100%;
+        padding-top: 180px;
+    }
+    .AppleTV_container img {
+        height: 50%;
+        width: 100%;
+        padding-top: 150px;
+    }
+    .Accessories_container img {
+        height: 50%;
+        padding-top: 150px;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+    .pp_first {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bottom_premenu_low_px {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 3%;
+    }
+    .bottom_premenu_low_px a {
+        text-decoration: none;
+        align-self: center;
+        margin-left: 5%;
+    }
+    .bottom_premenu_low_px p {
+        font-size: 15px;
+    }
+    .bottom_buy_menu {
+        display: none;
+    }
+    .product_pp_first {
+        width: 100%;
+    }
+    .product_pp_second {
+        width: 100%;
+        margin-top: 5%;
+    }
+    .brothers_container {
+        justify-content: space-evenly;
+    }
+    .pp_second {
+        flex-direction: column;
+        align-items: center;
+    }
+    .price {
+        align-self: center;
+    }
+    .new_product {
+        justify-content: left;
+        margin-left: 15%
+    }
+    .LogoCenterMobile {
+        width: 100%;
+    }
+    .social_network {
+        flex-direction: column;
+    }
+    .sn_item {
+        width: 42px;
+        height: 42px;
+    }
+    .dark_footer_menu p {
+        font-size: 14px;
+    }
+    #wf_products {
+        margin-bottom: 60%;
+    }
+    .SEO_container {
+        margin-top: 12%;
+    }
+    .popular_products__H1 {
+        flex-direction: column;
+    }
+    .AirPods_container {
+        width: 100%;
+    }
+    .AppleWatch_container {
+        width: 100%;
+    }
+    .AppleTV_container {
+        width: 100%;
+    }
+    .Accessories_container {
+        width: 100%;
+    }
+    .gadjets_container {
+        width: 30%;
+    }
+    .gadjets_container_all {
+        width: 30%;
+    }
+}

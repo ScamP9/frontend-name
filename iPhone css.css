@@ -2,6 +2,7 @@ html, body {
     background: #FFFFFF;
     margin: 0;
     padding: 0;
+    font-family: "PF Centro Sans Pro";
 }
 header {
 }
@@ -23,10 +24,14 @@ header {
     position: fixed;
     top: 0;
     z-index: 100;
+
 }
-#block {
-    width: 100%;
-    height: 64px;
+.mobile_menu {
+    text-align: left;
+    display: none;
+}
+.LogoCenterMobile {
+    display: none;
 }
 .LogoMain {
     max-width: 12.17%;
@@ -42,22 +47,26 @@ header {
     background-color: white;
     max-width: 100%;
     height: 50%;
+    display: none;
 }
 .whitemenuuser.white_scroll {
     position: fixed;
-    min-width: 100%;
+    width: 86%;
     background-color: white;
     display: flex;
-    justify-content: space-between; align-items: center;
+    justify-content: space-between;
+    align-items: center;
     z-index: 100;
     border-bottom: solid 1px black;
-    padding: 0 7.8360% 0 7.8360%;
+    padding: 0 7.03125% 0 7.03125%;
 }
 .whitemenuuser {
     max-width: 100%;
     display: flex;
-    justify-content: space-between; align-items: center;
-    padding: 0 7.8360% 0 7.8360%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7.03125% 0 7.03125%;
+    border-bottom: solid 1px black;
 }
 .whitemenu {
     font-size: 14px;
@@ -72,11 +81,11 @@ header {
 .whitemenu a:hover {
     color: darkviolet;
 }
-.max-width {
+.black-bar-top {
     max-width: 100%;
-    margin: 0 7.8360% 0 7.8360%;
-}
-.flex {
+    height: 6%;
+    margin: 0 7.03125% 0 7.03125%;
+    position: sticky;
     display: flex;
 }
 .Main-Menu {
@@ -106,45 +115,10 @@ header {
     font-family: Source Sans Pro;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
     line-height: 18px;
 }
 .menu-item-special {
     width: 80%;
-}
-
-/* дополнительные стили для этого примера */
-.slider_main {
-    width: 100%;
-    height: 520px;
-}
-.slider {
-    width: 100%;
-}
-
-.slider__items {
-    counter-reset: slide;
-}
-
-.slider__item {
-    position: relative;
-    counter-increment: slide;
-    background: black;
-    display: inline-block;
-}
-
-.slider__item::after {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    color: #fff;
-    font-style: italic;
-    font-size: 32px;
-    font-weight: bold;
-}
-.height_slider {
-    height: 520px;
-    width: 100%;
 }
 .img-fluid {
     display: inline-block;
@@ -153,6 +127,9 @@ header {
 }
 .svg-link:hover .svg-item {
     fill: blueviolet;
+}
+.popular_products {
+    margin: 6% 7% 3% 7%;
 }
 .popular_products_h1 {
     font-weight: 200;
@@ -165,6 +142,10 @@ header {
     display: flex;
 
 }
+.bottom_buy_menu {
+    display: flex;
+    justify-content: space-evenly;
+}
 .product_pp_first {
     width: 50%;
 
@@ -175,7 +156,7 @@ header {
 
 }
 .popular_products_1 {
-    margin: 0px 135px 0px 135px;
+    margin: 0;
 }
 .new_product {
     color: #ffffff;
@@ -191,11 +172,11 @@ header {
     font-family: sans-serif;
 }
 .img_container {
-    max-width: 100%;
+    width: 50%;
 }
 .img_container img{
     max-width: 100%;
-    margin: 21px 60.63px 34px 44.19px;
+    margin: 6.8% 20% 11% 14.6%;
 }
 .brothers_container {
     display: flex;
@@ -343,8 +324,23 @@ header {
 .bottom_premenu {
     font-family: sans-serif;
     display: flex;
-    justify-content: space-evenly; align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+.bottom_premenu_buy {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+.bottom_premenu_buy a {
+    text-decoration: none;
     max-width: 100%;
+}
+.bottom_premenu_low_px {
+    display: none;
 }
 .bottom_premenu a{
     text-decoration: none;
@@ -363,25 +359,25 @@ header {
     display: flex;
 }
 .img_container1 img{
-    margin: 78px 37px 91px 20px;
+    margin: 24.8% 12.2% 30.03% 6.4%;
     max-width: 100%;
 }
 .img_container1 {
-    max-width: 100%;
+    width: 50%;
 }
 .img_container2 img{
-    margin: 21px 74px 34px 40px;
+    margin: 16.2% 22.9% 11% 12.3%;
     max-width: 100%;
 }
 .img_container2 {
-    max-width: 100%;
+    width: 50%;
 }
 .price {
     font-weight: bold;
     font-family: PF Centro Sans Pro;
 }
 .popular_products_2 {
-    margin: 64px 135px 0px 135px;
+    margin: 3% 0 3% 0;
     max-width: 100%;
 }
 .popular_products__H1 {
@@ -391,8 +387,6 @@ header {
 .img_container_pp {
     width: 50%;
     height: 100%;
-    display: flex;
-    align-self: flex-end;
 }
 .AirPods_container {
     position: relative;
@@ -402,9 +396,10 @@ header {
     display: flex;
     flex-flow: nowrap;
 }
-.AirPods_container img{
-    margin: 0 0 0 40%;
-    max-width: 100%;
+.AirPods_container img {
+    width: 75%;
+    height: 100%;
+    background-size: cover;
 }
 .AppleWatch_container {
     position: relative;
@@ -414,10 +409,10 @@ header {
     display: flex;
     flex-flow: nowrap;
 }
-.AppleWatch_container img{
-    margin: 20% 0 0 0;
-    max-width: 100%;
-
+.AppleWatch_container img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
 }
 .AppleTV_container {
     position: relative;
@@ -427,13 +422,10 @@ header {
     display: flex;
     flex-flow: nowrap;
 }
-.AppleTV_container .Text_container {
-
-}
-.AppleTV_container img{
-    margin: 0 0 0 0;
-    max-width: 100%;
-
+.AppleTV_container img {
+    width: 80%;
+    height: 100%;
+    background-size: cover;
 }
 .Accessories_container {
     position: relative;
@@ -443,19 +435,20 @@ header {
     display: flex;
     flex-flow: nowrap;
 }
-.Accessories_container img{
-    margin: 0 0 0 0;
-    max-width: 100%;
-
+.Accessories_container img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
 }
 .Accessories_container .empty{
     height: auto;
 }
 .Text_container {
     margin: auto;
-    font-family: sans-serif;
     display: flex;
     flex-flow: column;
+    font-family: "PF Centro Sans Pro";
+    color: #1F1F1F;
 }
 .Text_container button{
     width: 83px;
@@ -466,6 +459,7 @@ header {
     color: #5A00A5;
     font-weight: bold;
     cursor: pointer;
+    align-self: center;
 }
 .Text_container button:hover {
     box-shadow: 0px 0px 50px 10px rgba(75, 0, 130, 0.2)inset;
@@ -475,8 +469,9 @@ header {
     transform: translateY(-2px);
 }
 .Text_container p{
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 24px;
+    font-weight: bold;
 }
 .empty {
     height: auto;
@@ -484,99 +479,96 @@ header {
 .popular_products_h3 {
     font-weight: 200;
     text-align: center;
-    margin-top: 5%;
-    font-family: sans-serif;
+    margin: 0;
 }
 .popular_products_3 {
-    margin: 64px 135px 0px 135px;
+    margin: 3% 0 3% 0;
 }
 .img_container3 {
-    margin: 48px 52px 61px 50px;
-    max-width: 100%;
+    width: 50%;
 }
 .img_container3 img{
     max-width: 100%;
+    margin: 13% 12.5% 18% 12%;
 }
 .popular_products_h4 {
     font-weight: 200;
     text-align: center;
-    margin-top: 5%;
-    font-family: sans-serif;
+    margin: 0;
 }
 .popular_products_4 {
-    margin: 64px 135px 0px 135px;
+    margin: 4% 0 3% 0;
+    font-weight: bold;
 }
 .popular_products_4 h3{
     color: black;
 }
 .gadjets_container {
-    width: 100%;
-    height: auto;
     background-color: #F8F8F8;
-    overflow: hidden;
+    width: 15%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 }
 .pp_first4 {
     margin-top: 32px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .pp_second4 {
     margin-top: 32px;
     display: flex;
-    justify-content: space-between;
-    overflow: hidden;
+    justify-content: space-evenly;
 }
 .gadjets_container h3{
-    font-weight: normal;
-    font-family: sans-serif;
-    margin: 32px 0px 0px 32px;
-    overflow: hidden;
+    margin: 10% 0% 0% 10%;
 }
 .gadjets_container_all {
-    width: 370px;
-    height: 180px;
-
+    width: 15%;
+    max-height: 254px;
     background-color: #F8F8F8;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .gadjets_container_all h3{
-    font-weight: normal;
-    font-family: sans-serif;
-    margin: 23% 31% 20% 31%;
-    position: absolute;
+    margin: 0;
 }
 .gadjets_text_container {
-    position: absolute;
     display: flex;
-    flex-flow: column;
     justify-content: space-evenly;
 }
 .img_gadjets_control {
-    width: 50%;
+
 }
 #dronSVGstyle {
     margin: auto;
+    max-width: 100%;
+    padding-bottom: 20px;
 }
 #geniusTOYstyle {
-    margin: 0 4.8% 0 54%;
+    margin: 0;
+    max-width: 100%;
 }
 #scooterstyle {
-    margin: 0 0 0 41.6%;
+    margin: 0;
+    max-width: 100%;
 }
 #actioncamerastyle {
-    margin: 3.3% 3% 7% 42%;
+    margin: 0;
+    max-width: 100%;
 }
 #Tvstationstyle {
-    margin: 0 0 0 34%;
+    margin: 0;
+    max-width: 100%;
 }
 .numbers_container {
     height: 24px;
     width: 26px;
     background-color: #DCEBFA;
     border-radius: 4px;
-    margin: auto;
+    margin: 10% 0 0 0;
     font-size: 12px;
-    font-family: sans-serif;
     font-weight: normal;
     color: #2988E0;
 }
@@ -588,39 +580,47 @@ header {
     height: 70px;
 }
 .popular_products_5 {
-    margin: 64px 135px 0px 135px;
+    margin: 3% 0 3% 0;
 }
 .popular_products_h5 {
     font-weight: 200;
     text-align: center;
-    margin-top: 5%;
-    font-family: sans-serif;
+    margin: 0;
 }
 .img_container5 {
-    margin: 78px 43px 91px 19px;
-    max-width: 100%;
+    width: 50%;
 }
 .img_container5 img {
     max-width: 100%;
+    margin: 25.3% 13.9% 29.5% 6.1%;
 }
 .SEO_container {
-    margin: 64px 135px 0px 135px;
+    margin: 3.9% 8.17577306% 0 8.17577306%;
 }
-.SEO_p {
-    font-size: 15px;
+.SEO_p_1 {
+    font-size: 20px;
     font-family: PF Centro Sans Pro;
     font-weight: bold;
+    margin-bottom: 0;
+}
+.SEO_p_2 {
+    font-size: 20px;
+    font-family: PF Centro Sans Pro;
+    font-weight: bold;
+    display: none;
+}
+.SEO_p_2 p {
+    margin-top: 0;
 }
 .SEO_vector {
     border: none;
     padding: 0;
     background-color: unset;
-    margin: 0;
+    margin-top: 5px;
     cursor: pointer;
+    align-content: center;
 }
 .SEO_button {
-    display: flex;
-    justify-content: space-between;
 }
 .SEO_vector:hover {
     box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.2)inset;
@@ -629,6 +629,12 @@ header {
     box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.4);
     transform: translateY(-2px);
 }
+.SEO_vector:before {
+    transform: rotateX(0);
+}
+.SEO_vector:after {
+    transform: rotateX(180deg);
+}
 .dark_footer {
     width: 100%;
     height: 200px;
@@ -636,11 +642,10 @@ header {
     margin-top: 70px;
 }
 .dark_footer_menu {
-    margin: 0 135px 0 135px;
-    padding-top: 40px;
+    margin: 0 7.03125% 0 7.03125%;
+    padding-top: 10px;
     display: flex;
     justify-content: space-between;
-    font-size: 13px;
 }
 .dark_footer_menu a{
     text-decoration: none;
@@ -660,7 +665,7 @@ header {
     background-color: #1F1F1F;
 }
 .last_menu {
-    margin: 0 135px 0 135px;
+    margin: 0 7.03125% 0 7.03125%;
     display: flex;
     justify-content: space-between; align-items: center;
 }
